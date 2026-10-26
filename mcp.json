@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "tum-private-voting-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "TUM Munich",
+        "PROJECT_TICKER": "TUMVOTE"
+      },
+      "tools": [
+        {
+          "name": "verify_tumvote_invariants",
+          "description": "Verifies deterministic invariants for TUM Private Voting AI on TUM Munich."
+        },
+        {
+          "name": "execute_tumvote_action",
+          "description": "Executes authenticated Governance state transition."
+        }
+      ]
+    }
+  }
+}
